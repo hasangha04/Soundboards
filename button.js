@@ -29,6 +29,11 @@ function addSoundsToPage(sounds)
         player.setAttribute('src', `https://hasangha04.github.io/Soundboards/${sound.src}`);
 
         playButton.addEventListener('click', () => {
+            if (player.currentTime >= player.duration)
+            {
+                player.currentTime = 0;
+            }
+            
             player.play();
         });
 
