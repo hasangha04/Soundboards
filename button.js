@@ -6,7 +6,7 @@ const soundsElement = document.querySelector('#sounds');
 })();
 
 async function getSounds() {
-  const response = await fetch('https://hasangha04.github.io/SoundBoard/sounds.json');
+  const response = await fetch('https://hasangha04.github.io/Soundboards/sounds.json');
   const json = await response.json();
   return json;
 }
@@ -26,7 +26,7 @@ function addSoundsToPage(sounds)
 
         const player = document.createElement('audio');
         soundDiv.appendChild(player);
-        player.setAttribute('src', `https://hasangha04.github.io/SoundBoard/sounds/${sound.src}`);
+        player.setAttribute('src', `https://hasangha04.github.io/Soundboards/${sound.src}`);
 
         playButton.addEventListener('click', () => {
             player.play();
