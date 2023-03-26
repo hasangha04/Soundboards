@@ -1,3 +1,16 @@
+const soundsElement = document.querySelector('#sounds');
+
+(async () => {
+    const sounds = await getSounds();
+    addSoundsToPage(sounds);
+})();
+
+async function getSounds() {
+  const response = await fetch('https://hasangha04.github.io/Soundboards/sounds.json');
+  const json = await response.json();
+  return json;
+}
+
 function addSoundsToPage(sounds) {
     const soundsElement = document.getElementById('sounds');
   
@@ -7,11 +20,11 @@ function addSoundsToPage(sounds) {
   
       const player = document.createElement('audio');
       soundDiv.appendChild(player);
-      player.setAttribute('src', `https://hasangha04.github.io/Soundboards/${sound.audioSrc}`);
+      player.setAttribute('src', `https://hasangha04.github.io/Soundboards/${sound.src}`);
   
       const image = document.createElement('img');
       soundDiv.appendChild(image);
-      image.setAttribute('src', `https://hasangha04.github.io/Soundboards/${sound.imageSrc}`);
+      image.setAttribute('src', `https://hasangha04.github.io/Soundboards/${sound.image}`);
   
       // Listen for image click event to play sound
       image.addEventListener('click', () => {
