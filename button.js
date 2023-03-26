@@ -31,39 +31,109 @@ function addSoundsToPage(sounds) {
         player.currentTime = 0;
         player.play();
       });
+
+      soundDiv.addEventListener('contextmenu', event => {
+        event.preventDefault();
+        editSound(soundDiv, player, image);
+      });
   
       soundsElement.appendChild(soundDiv);
     });
   
     // Create a button to add a new sound
     const newSoundButton = document.createElement('button');
-    newSoundButton.textContent = 'New Sound';
+    newSoundButton.textContent = '➕';
     newSoundButton.style.position = 'fixed';
     newSoundButton.style.bottom = '0';
     newSoundButton.style.right = '0';
     newSoundButton.style.backgroundColor = 'white';
-    newSoundButton.style.padding = '10px';
-    newSoundButton.style.borderRadius = '10px';
+    newSoundButton.style.padding = '5px';
+    newSoundButton.style.borderRadius = '60px';
+    newSoundButton.style.width = 'auto';
     document.body.appendChild(newSoundButton);
   
     // Listen for click event on new sound button
     newSoundButton.addEventListener('click', () => {
-      const newSoundDiv = document.createElement('div');
-      newSoundDiv.className = 'sound';
+    const newSoundDiv = document.createElement('div');
+    newSoundDiv.className = 'sound';
   
-      const newPlayer = document.createElement('audio');
-      newSoundDiv.appendChild(newPlayer);
+    const newPlayer = document.createElement('audio');
+    newSoundDiv.appendChild(newPlayer);
   
-      const newImage = document.createElement('img');
-      newSoundDiv.appendChild(newImage);
+    const newImage = document.createElement('img');
+    newSoundDiv.appendChild(newImage);
   
-      // Listen for image click event to play sound
-      newImage.addEventListener('click', () => {
-        newPlayer.currentTime = 0;
-        newPlayer.play();
-      });
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = 'audio/*';
+    fileInput.addEventListener('change', () => {
+      const file = fileInput.files[0];
+      if (file) {
+        newPlayer.src = URL.createObjectURL(file);
+      }
+    });
+    newSoundDiv.appendChild(fileInput);
   
-      soundsElement.appendChild(newSoundDiv);
+    const imageInput = document.createElement('input');
+    imageInput.type = 'file';
+    imageInput.accept = 'image/*';
+    imageInput.addEventListener('change', () => {
+      const file = imageInput.files[0];
+      if (file) {
+        newImage.src = URL.createObjectURL(file);
+      }
+    });
+    newSoundDiv.appendChild(imageInput);
+  
+    // Listen for image click event to play sound
+    newImage.addEventListener('click', () => {
+      newPlayer.currentTime = 0;
+      newPlayer.play();
+    });
+  
+    soundsElement.appendChild(newSoundDiv);
+  });
+  
+}
+
+function editSound(soundDiv) {
+    const player = soundDiv.querySelector('audio');
+    const image = soundDiv.querySelector('img');
+    soundDiv.removeChild(player);
+    soundDiv.removeChild(image);
+  
+    const newPlayer = document.createElement('audio');
+    soundDiv.appendChild(newPlayer);
+  
+    const newImage = document.createElement('img');
+    soundDiv.appendChild(newImage);
+  
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file';
+    fileInput.accept = 'audio/*';
+    fileInput.addEventListener('change', () => {
+      const file = fileInput.files[0];
+      if (file) {
+        newPlayer.src = URL.createObjectURL(file);
+      }
+    });
+    soundDiv.appendChild(fileInput);
+  
+    const imageInput = document.createElement('input');
+    imageInput.type = 'file';
+    imageInput.accept = 'image/*';
+    imageInput.addEventListener('change', () => {
+      const file = imageInput.files[0];
+      if (file) {
+        newImage.src = URL.createObjectURL(file);
+      }
+    });
+    soundDiv.appendChild(imageInput);
+  
+    // Listen for image click event to play sound
+    newImage.addEventListener('click', () => {
+      newPlayer.currentTime = 0;
+      newPlayer.play();
     });
   }
   
