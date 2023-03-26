@@ -11,7 +11,6 @@ async function getSounds() {
   return json;
 }
 
-
 function addSoundsToPage(sounds) {
     const soundsElement = document.getElementById('sounds');
   

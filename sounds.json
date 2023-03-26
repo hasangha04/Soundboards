@@ -1,48 +1,60 @@
 [{
     "title": "Right Answer",
-    "src": "Right Answer Vito.mp3"
+    "audioSrc": "Right Answer Vito.mp3",
+    "imageSrc": "vito.jpg"
 }, 
 {
     "title": "Report",
-    "src": "Among Us Report.mp3"
+    "audioSrc": "Among Us Report.mp3",
+    "imageSrc": "report.png"
 },
 {
     "title": "Among",
-    "src": "Among Us.mp3"
+    "audioSrc": "Among Us.mp3",
+    "imageSrc": "amongus.png"
 },
 {
     "title": "Hadouken",
-    "src": "Hadouken.mp3"
+    "audioSrc": "Hadouken.mp3",
+    "imageSrc": "hadouken.png"
 },
 {
     "title": "Dig This",
-    "src": "I Know Youre Gonna Dig This.mp3"
+    "audioSrc": "I Know Youre Gonna Dig This.mp3",
+    "imageSrc": "dig this.jpg"
 },
 {
     "title": "Horn",
-    "src": "Losing Horn.mp3"
+    "audioSrc": "Losing Horn.mp3",
+    "imageSrc": "horn.jpg"
 },
 {
     "title": "My Leg",
-    "src": "My Leg.mp3"
+    "audioSrc": "My Leg.mp3",
+    "imageSrc": "my leg.png"
 },
 {
     "title": "Perfect",
-    "src": "Perfect.mp3"
+    "audioSrc": "Perfect.mp3",
+    "imageSrc": "perfect.jpg"
 },
 {
     "title": "Spongebob",
-    "src": "Spongebob.mp3"
+    "audioSrc": "Spongebob.mp3",
+    "imageSrc": "spongebob.png"
 },
 {
     "title": "Tape",
-    "src": "Tape Rewind.mp3"
+    "audioSrc": "Tape Rewind.mp3",
+    "imageSrc": "tape.png"
 },
 {
     "title": "Vine",
-    "src": "Vine Boom.mp3"
+    "audioSrc": "Vine Boom.mp3",
+    "imageSrc": "vine.jpg"
 },
 {
     "title": "Waterphone",
-    "src": "Waterphone.mp3"
+    "audioSrc": "Waterphone.mp3",
+    "imageSrc": "waterphone.jpg"
 }]
