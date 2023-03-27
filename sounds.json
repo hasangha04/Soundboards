@@ -59,6 +59,11 @@
     "image": "Squid.png"
 },
 {
+    "title": "Spongebob Stinky Burger",
+    "src": "Burger.mp3",
+    "image": "Burger.jpg"
+},
+{
     "title": "Waterphone",
     "src": "Waterphone.mp3",
     "image": "Waterphone.jpg"
