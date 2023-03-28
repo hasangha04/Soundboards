@@ -43,13 +43,7 @@ function addSoundsToPage(sounds) {
     // Create a button to add a new sound
     const newSoundButton = document.createElement('button');
     newSoundButton.textContent = '➕';
-    newSoundButton.style.position = 'fixed';
-    newSoundButton.style.bottom = '0';
-    newSoundButton.style.right = '0';
-    newSoundButton.style.backgroundColor = 'white';
-    newSoundButton.style.padding = '5px';
-    newSoundButton.style.borderRadius = '60px';
-    newSoundButton.style.width = 'auto';
+    newSoundButton.classList.add('new-sound-button');
     document.body.appendChild(newSoundButton);
   
     // Listen for click event on new sound button

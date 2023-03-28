@@ -35,3 +35,13 @@ body {
   margin: auto;
   cursor: pointer;
 }
+
+.new-sound-button {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: white;
+  padding: 5px;
+  border-radius: 60px;
+  width: auto;
+}
